@@ -1,0 +1,11 @@
+os: linux
+dist: focal
+sudo: required
+group: edge
+arch: arm64-graviton2
+virt: vm
+services:
+    - docker
+script: 
+    - docker pull ubuntu:latest
+    - docker run --rm ubuntu:latest ls 
